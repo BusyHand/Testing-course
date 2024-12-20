@@ -3,10 +3,10 @@ name: Java CI
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'temurin' # Опции: 'zulu', 'temurin', 'adopt', 'adopt-hotspot', 'amazon', 'openjdk'
+          distribution: 'openjdk'
 
       # Кэшируем зависимости Maven для ускорения сборки
       - name: Cache Maven dependencies
